@@ -11,7 +11,8 @@ const customerList = [{ "id": 1, "name": "Janeva Ciccone", "email": "jciccone0@i
 ];
 
 const customerFilter = (list, name, rating) => {
-    return null;
+    const result = list.filter(item=>item.name.includes(name)&&item.rating>=rating);
+    return result.map(item=>item.name);
 };
 
 if (typeof module !== 'undefined') {
